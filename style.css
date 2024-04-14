@@ -53,23 +53,79 @@ body {
   }
 }  
 
-/* carrusel */
-.carousel-inner{
-    width: 10;
-    height: 25%
+/* Estilos para el contenedor de las tarjetas y el carrusel */
+.cards-container {
+    margin: 20px 20px 20px 20px; /* Ajustes de margen */
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Para centrar horizontalmente las tarjetas */
+    align-items: flex-start; /* Para alinear las tarjetas arriba */
+    padding: 20px;
+}
+.container_carrusel {
+    margin: 0 40px; /* Ajustes de margen */
+}
+.carousel-inner {
+    width: 100%;
+    height: 25%;
+}
+.carousel-control.left{
+    margin-left: 0px;
+}
+.carousel-control.right{
+    margin-right: 0px;
+}
+/* Estilos para las tarjetas de volteo */
+.container_flip_card{
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Para centrar horizontalmente las tarjetas */
+
     
 }
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px; /* Ajusta el espacio entre las tarjetas y el carrusel */
+    margin-right: 20px;
+    perspective: 1000px;
+   
+}
+.flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
-.item active{
-    width: 1200px;
-    height: 1000px
-    
+}
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.container{
-    width: 125%;
-    height: 1000px;
-    margin-top: 40px;
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.flip-card-back {
+    background-color: #9089cc ;
+    color: white;
+    transform: rotateY(180deg);
 }
 /* estilo login */
 
@@ -239,49 +295,43 @@ body {
         margin: 0;
     }
 }
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-    background-color: transparent;
+.container_product {
+    display: flex;
+    justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card {
     width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 20px; /* Agrega un margen entre las tarjetas */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+  .price {
+    color: grey;
+    font-size: 22px;
   }
   
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
     color: white;
-    transform: rotateY(180deg);
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
   }
   
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .card p {
+    margin: 10px; /* Agrega un margen alrededor del texto dentro de la tarjeta */
+}
+.card h1{
+    margin: 5px;
+}
