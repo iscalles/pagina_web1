@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon2.ico">
+
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <div class="header">
+        <a id="lineant" href="inicio.html" class="logo">Cosmetica ADV</a>
+        <div class="header-right">
+            <a href="/inicio/inicio.html">Inicio</a>
+            <a href="/productos/productos.html">Productos</a>
+            <a href="/categoria/categoria.html">Categorías</a>
+            <a href="/nosotros/sobre_nosotros.html">Sobre nosotros</a>
+            <a href="/login/login.html">Perfil</a>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="form-contenedor">
+            <div class="cabecera">
+                <h1 class="tituloRegistro">Registro de Usuario</h1>
+            </div>
+            <form id="formulario" action="">
+                <div class="form-control">
+                    <label for="nombre">Nombre Completo: </label>
+                    <input type="text" id="nombre">
+                    <p></p>
+                </div>
+                <div class="form-control">
+                    <label for="rut">Rut: </label>
+                    <input type="text" id="rut">
+                    <p></p>
+                </div>
+                <div class="form-control">
+                    <label for="correo">Correo: </label>
+                    <input type="email" id="correo">
+                    <p></p>
+                </div>
+                <div class="form-control">
+                    <label for="fono">Teléfono: </label>
+                    <input type="tel" pattern="[0-9]{9}" id="fono">
+                    <p></p>
+                </div>
+                <button class="botonRegistro">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="validaRegistro.js"></script>
+</body>
+</html>

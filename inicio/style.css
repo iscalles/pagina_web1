@@ -1,0 +1,128 @@
+* {box-sizing: border-box;}
+#lineant{
+    text-decoration: none;
+}
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 40px;
+}
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 17px; 
+    line-height: 25px;
+    border-radius: 30px;
+}
+
+.header a.logo {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    background-color:rgb(156, 69, 255);
+    border-radius: 30px;
+
+}
+.header a.logo:hover{
+    background-color:rgb(156, 69, 255);
+}
+.header a:hover {
+    background-color:rgb(137, 60, 223);
+    color: white;
+}
+.header-right {
+    float: right;
+}
+@media screen and (max-width: 500px) {
+.header a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+.header-right {
+    float: none;
+}
+}  
+
+/* Estilos para el contenedor de las tarjetas y el carrusel */
+.cards-container {
+    margin: 20px 20px 20px 20px; /* Ajustes de margen */
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Para centrar horizontalmente las tarjetas */
+    align-items: flex-start; /* Para alinear las tarjetas arriba */
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.container_carrusel {
+    margin: 0 40px; /* Ajustes de margen */
+}
+.carousel-inner {
+    width: 100%;
+    height: 25%;
+}
+.carousel-control.left{
+    margin-left: 0px;
+}
+.carousel-control.right{
+    margin-right: 0px;
+}
+/* Estilos para las tarjetas de volteo */
+.container_flip_card{
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Para centrar horizontalmente las tarjetas */
+}
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px; /* Ajusta el espacio entre las tarjetas y el carrusel */
+    margin-right: 150px;
+    perspective: 1000px;
+}
+.flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.flip-card-back {
+    background-color: #9089cc ;
+    color: white;
+    transform: rotateY(180deg);
+}
