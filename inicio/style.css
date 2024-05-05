@@ -57,7 +57,8 @@ body {
 
 /* Estilos para el contenedor de las tarjetas y el carrusel */
 .cards-container {
-    margin: 20px 20px 20px 20px; /* Ajustes de margen */
+    box-sizing: border-box;
+    margin: 20px; /* Ajustes de margen */
     display: flex;
     flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
     justify-content: center; /* Para centrar horizontalmente las tarjetas */
