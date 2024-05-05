@@ -1,0 +1,496 @@
+* {box-sizing: border-box;}
+#lineant{
+    text-decoration: none;
+}
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 40px;
+}
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 17px; 
+    line-height: 25px;
+    border-radius: 30px;
+}
+
+.header a.logo {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    background-color:rgb(156, 69, 255);
+    border-radius: 30px;
+
+}
+.header a.logo:hover{
+    background-color:rgb(156, 69, 255);
+}
+.header a:hover {
+    background-color:rgb(137, 60, 223);
+    color: white;
+}
+.header-right {
+    float: right;
+}
+@media screen and (max-width: 500px) {
+.header a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+.header-right {
+    float: none;
+}
+}  
+
+/* Estilos para el contenedor de las tarjetas y el carrusel */
+.cards-container {
+    margin: 20px 20px 20px 20px; /* Ajustes de margen */
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Para centrar horizontalmente las tarjetas */
+    align-items: flex-start; /* Para alinear las tarjetas arriba */
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.container_carrusel {
+    margin: 0 40px; /* Ajustes de margen */
+}
+.carousel-inner {
+    width: 100%;
+    height: 25%;
+}
+.carousel-control.left{
+    margin-left: 0px;
+}
+.carousel-control.right{
+    margin-right: 0px;
+}
+/* Estilos para las tarjetas de volteo */
+.container_flip_card{
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Para centrar horizontalmente las tarjetas */
+}
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px; /* Ajusta el espacio entre las tarjetas y el carrusel */
+    margin-right: 150px;
+    perspective: 1000px;
+}
+.flip-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.flip-card-back {
+    background-color: #9089cc ;
+    color: white;
+    transform: rotateY(180deg);
+}
+/* estilo login */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --login-bg:#f8f3ff;
+    --title-bg: #9089cc;
+    --button-bg: #674baf;
+    --light-pink: #e882e8;
+    --image-bg:  #eadbff ;
+}
+
+.login-container {
+    height: 35em; 
+    width: 50em;
+    margin: 2em auto 0; /* Añadir margen en la parte superior y centrar horizontalmente */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar verticalmente el contenido */
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: var(--login-bg);
+}
+
+.image-container {
+    padding: 2rem;
+    width: 50%;
+    background-color: var(--image-bg);
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+
+.social-login {
+    width: 100%;
+    display: none;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.social-login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-login-element img {
+    width: 1.875rem;
+    height: 1.875rem;
+    position: relative;
+    top: 0;
+    left: -0.625rem;
+}
+
+.social-login-element:hover {
+    background-color: #fff;
+}
+
+.login-info-container > p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    height: 55%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input, .btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.input {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.input:hover {
+    border: 2px solid var(--button-bg);
+}
+
+.btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+
+.inputs-container p {
+    margin: 0;
+}
+
+.span {
+    color: var(--light-pink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        width: 70%;
+        margin-top: 3rem;
+    }
+    .login-info-container {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    .image-container {
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 650px) {
+    .login-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-container {
+        height: 90%;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        height: 30%;
+    }
+
+    .login-info-container > p {
+        margin: 0;
+    }
+}
+/* estilo de tarjetas en obras/producto */
+.container_product {
+    display: flex;
+    justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 300px;
+    margin: 20px; /* Agrega un margen entre las tarjetas */
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 7px;
+}
+.price {
+    color: grey;
+    font-size: 22px;
+}
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 7px;
+}
+.card button:hover {
+    opacity: 0.7;
+}
+.card p {
+    margin: 10px; /* Agrega un margen alrededor del texto dentro de la tarjeta */
+}
+.card h1{
+    margin: 5px;
+}
+/* footer */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #674baf;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+.menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.image-product{
+    padding: 5px;
+    background-color: #000;
+}
+/* Estilo para el registro */
+
+.contenedor{ 
+    width: 400px;
+    max-width: 100%;
+    margin: 4em auto 0; /* Añadir margen en la parte superior y centrar horizontalmente */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.cabecera {
+    background: #13334c;
+    color:azure;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+    border-radius: 7px;
+}
+#formulario {
+    padding: 30px 20px;
+}
+.form-control {    
+    margin-bottom: 7px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label {
+    display: inline-block;
+    margin-bottom: 7px;
+    font:weight 200px
+}
+.form-control input {
+    border: none;
+    background-color: #f0f0f0;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;    
+}
+.form-control, input:focus {
+    outline: none;
+}
+.botonRegistro{
+    padding: 10px 50px;
+    display: flex;
+    margin: auto;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    cursor: pointer;
+}
+.tituloRegistro{
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--title-bg);
+}
+.form-control.ok input {
+    border: 0.1px solid;
+    border-color: #08ffc8;
+}
+.form-control.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+}
+.form-control p {
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+
+.form-control.falla p {
+    visibility: visible;
+    color:#e74c3c;
+}
