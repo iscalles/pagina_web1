@@ -45,10 +45,78 @@
                     <input type="tel" pattern="[0-9]{9}" id="fono">
                     <p></p>
                 </div>
-                <button class="botonRegistro">Enviar</button>
+                <div class="form-control">
+                    <label for="contra">Contraseña: </label>
+                    <input type="password" id="contra">
+                    <p></p>
+                </div>
+                <div class="form-control">
+                    <label for="confirma">Confirme su contraseña: </label>
+                    <input type="password" id="confirma">
+                    <p></p>
+                </div>
+                <button class="botonRegistro" id="open">Enviar</button>
+                </div>
             </form>
         </div>
     </div>
+    <div id="modal_container" class="modal-container">
+        <div class="modal">
+            <h1>¡Registro Exitoso!</h1>
+            <button id="close" class="botonRegistro">Cerrar</button>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="inicio.html" class="menu-icon"> Inicio </a>
+            </li>
+            <li class="menu-elem">
+                <a href="obras.html" class="menu-icon"> Obras </a>
+            </li>
+            <li class="menu-elem">
+                <a href="categorias.html" class="menu-icon"> Categorias </a>
+            </li>
+            <li class="menu-elem">
+                <a href="sobre_nosotros" class="menu-icon"> Sobre Nosotros </a>
+            </li>
+        </ul>
+        <p class="text">@Año | Todos los derechos reservados</p>
+    </footer>
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="validaRegistro.js"></script>
 </body>
 </html>

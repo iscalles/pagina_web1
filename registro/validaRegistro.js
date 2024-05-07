@@ -1,9 +1,13 @@
 window.addEventListener('load', ()=> {
+
     const form = document.getElementById('formulario')
     const nombre = document.getElementById('nombre')
     const rut = document.getElementById('rut')
     const correo = document.getElementById('correo')
     const fono = document.getElementById('fono')
+    const contra = document.getElementById('contra')
+    const confirma = document.getElementById('confirma')
+
 
     form.addEventListener('submit',(e) =>  {
         e.preventDefault()
@@ -14,11 +18,13 @@ window.addEventListener('load', ()=> {
         const nombreValor = nombre.value.trim()
         const rutValor = rut.value.trim()
         const correoValor = correo.value.trim()
-        const fonoValor = fono.value.trim();
+        const fonoValor = fono.value.trim()
+        const contraValor = contra.value.trim()
+        const confirmaValor = confirma.value.trim();
 
         //Validar campo Nombre
         if(!nombreValor){
-            validarFalla(nombre, ('Campo vacío'))
+            validaFalla(nombre, ('Campo vacío'))
         }else{
             validaOk(nombre)
         }
@@ -48,20 +54,39 @@ window.addEventListener('load', ()=> {
         }else{
             validaOk(fono)
         }
+        //Validar Campo Contraseña
+        const er = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}$/ 
+        if(!contraValor){
+            validaFalla(contra, ('Campo vacío'))
+        }else if(contraValor.length < 8){
+            validaFalla(contra,'Contraseña inválida')
+        }else if(!contraValor.match(er)){
+            validaFalla(contra,'Debe tener una may., una min. y un num.')
+        }else{
+            validaOk(contra)
+        }
+        //Validar contraConfirma
+        if(!confirmaValor){
+            validaFalla(confirma,'Confirme su contraseña')
+        }else if(contraValor !== confirmaValor){
+            validaFalla(confirma,'Contraseña no coincide')
+        }else{
+            validaOk(confirma)
+        }
     }
     //Funcion Cambia la clase de formControl
     const validaFalla = (input, msje) => {
-        const formControl = input.parentElement
-        const aviso = formControl.querySelector('p')
-        aviso.innerText = msje
+    const formControl = input.parentElement
+    const aviso = formControl.querySelector('p')
+    aviso.innerText = msje
 
-        formControl.className = 'form.control falla'
+    formControl.className = 'form-control falla'
 
     }
-    const validaOk = (input,msje) =>{
-        const formControl = input.querySelector('p')
-        
-        formControl.className = 'form-control ok'
+    const validaOk = (input, msje) =>{
+    const formControl = input.querySelector('p')
+    
+    formControl.className = 'form-control ok'
     }
     //Regex correo
     const validaCorreo = (correo) => {
@@ -75,4 +100,20 @@ window.addEventListener('load', ()=> {
     const validaFono = (fono) => {
         return /^(\+?56)?(\s?)(0?9)(\s?)[98765432]\d{7}$/.test(fono);
     }
+    
 })
+
+
+//BOTON LOL
+
+const open = document.getElementById('open');
+const modal_container = document.getElementById('modal_container');
+const close = document.getElementById('close');
+
+open.addEventListener('click', () => {
+    modal_container.classList.add('show');  
+});
+
+close.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+});
