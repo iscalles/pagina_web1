@@ -73,10 +73,12 @@ body {
     border-radius: 7px;
     border
 }
+
 .price {
     color: #111;
-    font-size: 22px;
+    font-size:22px;
 }
+
 .card button {
     border: none;
     outline: 0;
@@ -177,4 +179,8 @@ body {
 .image-product{
     padding: 5px;
     background-color: #000;
+    float: left; width: 800px; ; height: 800px;
+}
+.img{
+    float: left; width: 800px; ; height: 800px;
 }
