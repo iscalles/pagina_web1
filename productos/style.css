@@ -71,7 +71,6 @@ body {
     box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 7px;
-    border
 }
 
 .price {
@@ -102,6 +101,8 @@ body {
 }
 .card img{
     padding: 20px 50px;
+    width: 400px;
+    height: 400px;
 }
 /* footer */
 .footer {
@@ -175,12 +176,4 @@ body {
     margin-top: 15px;
     margin-bottom: 10px;
     font-size: 20px;
-}
-.image-product{
-    padding: 5px;
-    background-color: #000;
-    float: left; width: 800px; ; height: 800px;
-}
-.img{
-    float: left; width: 800px; ; height: 800px;
 }
