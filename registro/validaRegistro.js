@@ -104,7 +104,7 @@ window.addEventListener('load', ()=> {
 })
 
 
-//BOTON LOL
+//BOTON modal
 
 const open = document.getElementById('open');
 const modal_container = document.getElementById('modal_container');
