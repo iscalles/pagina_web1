@@ -46,6 +46,7 @@ window.addEventListener('load', ()=> {
         }else{
             validaOk(rut)
         }
+        
         //Validar Campo Telefono
         if(!fonoValor){
             validaFalla(fono, 'Campo vacío')

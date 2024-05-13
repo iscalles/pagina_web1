@@ -4,13 +4,13 @@
 }
 body { 
     margin: 0;
+    background-color: #f8f3ff;
     font-family: Arial, Helvetica, sans-serif;
 }
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px 10px;
-    margin-top: 20px;
     position: relative;
     top: 0;
 }
@@ -54,3 +54,101 @@ body {
         float: none;
     }
 }  
+/*card*/
+.cards-container{
+    display: flex;
+    justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.card{
+    background: #f8f3ff;
+    text-align: center;
+    width: 300px;
+    margin: 44px;
+    margin-top: 50px;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px 1px #D0B7E0;
+    border-radius: 10px;
+    display: inline-block;
+}
+.card_content{
+    color: #908e94;
+}
+.card_title{
+    margin-bottom: 30px;
+    color:  #9089cc;
+}
+/* footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #674baf;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+.menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}

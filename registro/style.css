@@ -4,13 +4,13 @@
 }
 body { 
     margin: 0;
+    background-color: #f8f3ff;
     font-family: Arial, Helvetica, sans-serif;
 }
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px 10px;
-    margin-top: 20px;
     position: relative;
     top: 0;
 }
@@ -23,17 +23,21 @@ body {
     line-height: 25px;
     border-radius: 40px;
 }
+
 /*.header a:hover {
     background-color:rgb(137, 60, 223);
     color: white;
     text-decoration: none;
 }*/
+
 .header-right {
     float: right;
 }
+
 .header-right a{
     padding: 20px 10px;
 }
+
 .header-right a:hover{
     background-color:rgb(137, 60, 223);
     color: white;
@@ -135,7 +139,7 @@ body {
 }
 .form-control.falla p {
     visibility: visible;
-    color: #9089cc;
+    color: #f00;
 }
 
 .botonRegistro{

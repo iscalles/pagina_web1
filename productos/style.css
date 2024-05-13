@@ -5,12 +5,12 @@
 body { 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f3ff;
 }
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px 10px;
-    margin-top: 20px;
     position: relative;
     top: 0;
 }
@@ -108,7 +108,7 @@ body {
     clear: both;
     display: table;
 }
-/* estilo de tarjetas en obras */
+/* estilo de tarjetas en productos */
 .container_product {
     display: flex;
     justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
@@ -118,19 +118,21 @@ body {
 }
 
 .card {
-    width: 400px;
+    width: 300px;
     height: fit-content;
     margin: 20px; /* Agrega un margen entre las tarjetas */
     box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 7px;
+    background-color: #fff;
 }
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .price {
     color: #111;
-    font-size:22px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .card button {
@@ -144,20 +146,27 @@ body {
     width: 100%;
     font-size: 18px;
     border-radius: 7px;
+    margin-bottom: 20px;
 }
 .card button:hover {
+    transition: 0.2s;
     opacity: 0.7;
 }
-.card p {
-    margin: 10px; /* Agrega un margen alrededor del texto dentro de la tarjeta */
+.card p{
+    margin: 5px 50px;
+    font-size: 0.8rem; /* Agrega un margen alrededor del texto dentro de la tarjeta */
 }
-.card h1{
-    margin: 5px;
+.card h2{
+    font-weight: 100;
+    font-size: 1.1rem;
+    text-align: center;
 }
 .card img{
-    padding: 20px 50px;
-    width: 400px;
-    height: 400px;
+    padding: 30px 50px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid transparent;
+    border-radius: 20px;
 }
 /* footer */
 .footer {
