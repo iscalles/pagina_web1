@@ -1,131 +1,157 @@
-* {box-sizing: border-box;}
-#lineant{
-    text-decoration: none;
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 body { 
     margin: 0;
+    background-color: #f8f3ff;
     font-family: Arial, Helvetica, sans-serif;
 }
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #fff;
     padding: 20px 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 40px;
+    position: relative;
+    top: 0;
 }
 .header a {
     float: left;
     color: black;
     text-align: center;
-    padding: 12px;
     text-decoration: none;
     font-size: 17px; 
     line-height: 25px;
-    border-radius: 30px;
+    border-radius: 40px;
 }
-
-.header a.logo {
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-    background-color:rgb(156, 69, 255);
-    border-radius: 30px;
-
-}
-.header a.logo:hover{
-    background-color:rgb(156, 69, 255);
-}
-.header a:hover {
+/*.header a:hover {
     background-color:rgb(137, 60, 223);
     color: white;
-}
+    text-decoration: none;
+}*/
 .header-right {
     float: right;
 }
+.header-right a{
+    padding: 20px 10px;
+}
+.header-right a:hover{
+    background-color:rgb(137, 60, 223);
+    color: white;
+    text-decoration: none;
+}
+.logo img{
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+}
 @media screen and (max-width: 500px) {
-.header a {
-    float: none;
-    display: block;
-    text-align: left;
-}
-.header-right {
-    float: none;
-}
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
 }  
 
-/* Estilos para el contenedor de las tarjetas y el carrusel */
-.cards-container {
-    margin: 20px 20px 20px 20px; /* Ajustes de margen */
-    display: flex;
-    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
-    justify-content: center; /* Para centrar horizontalmente las tarjetas */
-    align-items: flex-start; /* Para alinear las tarjetas arriba */
-    padding: 20px;
-    margin-bottom: 40px;
-}
+/* Estilos para el contenedor del carrusel */
 .container_carrusel {
-    margin: 0 40px; /* Ajustes de margen */
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 800px;
+    height: 450px;
+
+    /* Ajustes de margen */
 }
-.carousel-inner {
-    width: 100%;
-    height: 25%;
+
+.carousel-inner img{
+    width: 800px;
+    max-height: 450px;
+
 }
+    
 .carousel-control.left{
     margin-left: 0px;
 }
 .carousel-control.right{
     margin-right: 0px;
 }
-/* Estilos para las tarjetas de volteo */
-.container_flip_card{
+/* footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #674baf;
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
-    flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no hay suficiente espacio */
-    justify-content: center; /* Para centrar horizontalmente las tarjetas */
-}
-.flip-card {
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    margin-top: 40px; /* Ajusta el espacio entre las tarjetas y el carrusel */
-    margin-right: 150px;
-    perspective: 1000px;
-}
-.flip-card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.flip-card-inner {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.9s;
-    transform-style: preserve-3d;
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
-}
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
 }
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
+
+.icon-elem {
+    list-style: none;
 }
-.flip-card-back {
-    background-color: #9089cc ;
+
+.icon {
     color: white;
-    transform: rotateY(180deg);
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
 }
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+.menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
 /* estilo login */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
@@ -295,7 +321,65 @@ body {
         margin: 0;
     }
 }
-/* estilo de tarjetas en obras/producto */
+
+
+/* estilo de productos */
+
+/*cuerpo*/
+.cabecera h1{
+    font-size: 50px;
+    text-align: center;
+    color:  #9089cc;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+/* boton buscar */
+.contenedor-search{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.search-bar{
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 500px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+.search-bar input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    flex: 1;
+}
+.search-bar button {
+    padding: 10px;
+    background: rgb(144, 93, 203);
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-left: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+.search-bar button:hover {
+    background:  #9089cc;
+}
+
+.search-bar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* estilo de tarjetas en productos */
 .container_product {
     display: flex;
     justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
@@ -306,15 +390,22 @@ body {
 
 .card {
     width: 300px;
+    height: fit-content;
     margin: 20px; /* Agrega un margen entre las tarjetas */
     box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 7px;
+    background-color: #fff;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .price {
-    color: grey;
-    font-size: 22px;
+    color: #111;
+    font-size: 1rem;
+    text-align: center;
 }
+
 .card button {
     border: none;
     outline: 0;
@@ -326,97 +417,33 @@ body {
     width: 100%;
     font-size: 18px;
     border-radius: 7px;
+    margin-bottom: 20px;
 }
 .card button:hover {
+    transition: 0.2s;
     opacity: 0.7;
 }
-.card p {
-    margin: 10px; /* Agrega un margen alrededor del texto dentro de la tarjeta */
+.card p{
+    margin: 5px 50px;
+    font-size: 0.8rem; /* Agrega un margen alrededor del texto dentro de la tarjeta */
 }
-.card h1{
-    margin: 5px;
-}
-/* footer */
-.footer {
-    position: relative;
-    width: 100%;
-    background: #674baf;
-    min-height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 10px 5px;
-    flex-wrap: wrap;
-}
-
-.icon-elem {
-    list-style: none;
-}
-
-.icon {
-    color: white;
-    font-size: 32px;
-    display: inline-block;
-    margin: 0 10px;
-    transition: 0.5s;
-}
-
-.icon:hover {
-    transform: translateY(-10px);
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
-
-.menu-elem {
-    list-style: none;
-}
-.menu-icon {
-    color: white;
-    font-size: 20px;
-    display: inline-block;
-    text-decoration: none;
-    margin: 5px 10px;
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-.menu-icon:hover {
-    opacity: 1;
-}
-
-.text {
-    color: white;
+.card h2{
+    font-weight: 100;
+    font-size: 1.1rem;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 20px;
 }
-.image-product{
-    padding: 5px;
-    background-color: #000;
+.card img{
+    padding: 30px 50px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid transparent;
+    border-radius: 20px;
 }
+
 /* Estilo para el registro */
 
 .contenedor{ 
-    width: 400px;
-    max-width: 100%;
+    width: 40vw;
     margin: 4em auto 0; /* Añadir margen en la parte superior y centrar horizontalmente */
     border-radius: 10px;
     display: flex;
@@ -424,15 +451,22 @@ body {
     overflow: hidden;
 }
 .cabecera {
-    background: #13334c;
     color:azure;
     text-align: center;
     border-bottom: 1px solid #f0f0f0;
     padding: 20px 40px;
-    border-radius: 7px;
+}
+
+.tituloRegistro{
+    color: #9089cc;
+}
+.form-contenedor{
+    background-color: #f8f3ff;
+    width: 100%;
 }
 #formulario {
     padding: 30px 20px;
+    width: 100%;
 }
 .form-control {    
     margin-bottom: 7px;
@@ -446,7 +480,7 @@ body {
 }
 .form-control input {
     border: none;
-    background-color: #f0f0f0;
+    background-color: #eaeaea;
     display: block;
     font-family: inherit;
     font-size: 16px;
@@ -456,6 +490,38 @@ body {
 .form-control, input:focus {
     outline: none;
 }
+.form-control.falla input {
+    background-color: #eaeaea;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border: 0.1px solid #f00;
+    
+}
+.form-control.ok input {
+    background-color: #eaeaea;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    border: 0.1px solid #0f0;
+    
+}
+.form-control p {
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+}
+.form-control.falla p {
+    visibility: visible;
+    color: #f00;
+}
+
 .botonRegistro{
     padding: 10px 50px;
     display: flex;
@@ -465,7 +531,7 @@ body {
     color: white;
     border: none;
     border-radius: 5px;
-    background-color: var(--button-bg);
+    background-color: #674baf;
     cursor: pointer;
 }
 .tituloRegistro{
@@ -474,23 +540,34 @@ body {
     letter-spacing: 1px;
     color: var(--title-bg);
 }
-.form-control.ok input {
-    border: 0.1px solid;
-    border-color: #08ffc8;
-}
-.form-control.falla input {
-    border: 0.1px solid;
-    border-color: #fe5f55;
-}
-.form-control p {
-    visibility: hidden;
-    position: absolute;
-    font-size: small;
-    font-weight: 500;
-    text-align: right;
+/*modal */
+
+.modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
 }
 
-.form-control.falla p {
-    visibility: visible;
-    color:#e74c3c;
+.modal {
+    background-color: #fff;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
 }
