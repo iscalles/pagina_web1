@@ -197,6 +197,7 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--title-bg);
+    margin-bottom: 40px;
 }
 
 .social-login {
@@ -245,27 +246,27 @@ body {
     align-items: center;
 }
 
-.input, .btn {
-    width: 90%;
-    height: 3.125rem;
+.reg, .btn-reg {
+    height: 2.5rem;
     font-size: 1em;
 }
 
-.input {
+.reg {
     padding-left: 20px;
     border: none;
     border-radius: 5px;
     font-weight: 600;
     letter-spacing: 1px;
     box-sizing: border-box;
+    width: 90%;
 }
 
-.input:hover {
+.reg:hover {
     border: 2px solid var(--button-bg);
 }
 
-.btn {
-    width: 80%;
+.btn-reg {
+    width: 60%;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: white;
@@ -440,134 +441,74 @@ body {
     border-radius: 20px;
 }
 
-/* Estilo para el registro */
+/*estilo pagina categoria*/
 
-.contenedor{ 
-    width: 40vw;
-    margin: 4em auto 0; /* Añadir margen en la parte superior y centrar horizontalmente */
+/*card-categorias*/
+.cards-container-categoria{
+    display: flex;
+    justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.card-categoria{
+    background: #f8f3ff;
+    text-align: center;
+    width: 300px;
+    margin: 44px;
+    margin-top: 50px;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px 1px #D0B7E0;
     border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-}
-.cabecera {
-    color:azure;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-    padding: 20px 40px;
-}
-
-.tituloRegistro{
-    color: #9089cc;
-}
-.form-contenedor{
-    background-color: #f8f3ff;
-    width: 100%;
-}
-#formulario {
-    padding: 30px 20px;
-    width: 100%;
-}
-.form-control {    
-    margin-bottom: 7px;
-    padding-bottom: 20px;
-    position: relative;
-}
-.form-control label {
     display: inline-block;
-    margin-bottom: 7px;
-    font:weight 200px
 }
-.form-control input {
-    border: none;
-    background-color: #eaeaea;
-    display: block;
-    font-family: inherit;
-    font-size: 16px;
-    padding: 12px;
-    width: 100%;    
+.card_content_categoria{
+    color: #908e94;
 }
-.form-control, input:focus {
-    outline: none;
-}
-.form-control.falla input {
-    background-color: #eaeaea;
-    display: block;
-    font-family: inherit;
-    font-size: 16px;
-    padding: 12px;
-    width: 100%;
-    border: 0.1px solid #f00;
-    
-}
-.form-control.ok input {
-    background-color: #eaeaea;
-    display: block;
-    font-family: inherit;
-    font-size: 16px;
-    padding: 12px;
-    width: 100%;
-    border: 0.1px solid #0f0;
-    
-}
-.form-control p {
-    visibility: hidden;
-    position: absolute;
-    font-size: small;
-    font-weight: 500;
-    text-align: right;
-}
-.form-control.falla p {
-    visibility: visible;
-    color: #f00;
+.card_title_categoria{
+    margin-bottom: 30px;
+    color:  #9089cc;
 }
 
-.botonRegistro{
-    padding: 10px 50px;
+/* estilo pagina sobre nosotros */
+/*card*/
+.cards-container-nosotros{
     display: flex;
-    margin: auto;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    background-color: #674baf;
-    cursor: pointer;
+    justify-content: space-around; /* Para distribuir las tarjetas horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-.tituloRegistro{
-    font-size: 1.7rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--title-bg);
-}
-/*modal */
-
-.modal-container {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.3);
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    pointer-events: none;
-    opacity: 0;  
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: opacity 0.3s ease;
-}
-
-.modal {
-    background-color: #fff;
-    width: 600px;
-    max-width: 100%;
-    padding: 30px 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.card-nosotros{
+    background: #f8f3ff;
     text-align: center;
+    width: 300px;
+    margin: 44px;
+    margin-top: 50px;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px 1px #D0B7E0;
+    border-radius: 10px;
+    display: inline-block;
 }
-
-.show {
-    pointer-events: auto;
-    opacity: 1;
+.card_content_nosotros{
+    color: #908e94;
+}
+.card_title_nosotros{
+    color:  #9089cc;
+}
+/*cuerpo*/
+.cabecera_nosotros h1{
+    text-align: center;
+    color:  #9089cc;
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.cuerpo_nosotros{
+    width: 70vw;
+    text-align: justify;
+    margin: auto;
+    margin-top: 20px;
+    color: #908e94;
+}
+.last{
+    margin-bottom: 40px;
 }
